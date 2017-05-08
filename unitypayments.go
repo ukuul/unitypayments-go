@@ -65,7 +65,5 @@ func (p UnityPayments) SendMobileMoney(request SendMobileMoneyRequest) (*MobileM
 	if res.Status() >= 200 && res.Status() < 300 {
 		return response, nil
 	}
-	fmt.Printf("%d", res.Status())
-	fmt.Printf("%+v", res.RawText())
 	return nil, errResponse
 }
